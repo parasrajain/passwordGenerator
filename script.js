@@ -24,6 +24,11 @@ function showSlider() {
     //passLength = slideroutput.value;
     slideroutput.value=passLength
     passLengthDisplay.innerText = passLength;
+
+    const mini = slideroutput.min;
+    const maxi = slideroutput.max;
+    slideroutput.style.backgroundSize =
+      ((passLength - mini) * 100) / (maxi - mini) + "% 100%";
 }
 
 
